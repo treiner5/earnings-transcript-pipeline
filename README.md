@@ -22,3 +22,20 @@ A Streamlit application for managing and analyzing earnings call transcripts usi
 ```bash
 git clone https://github.com/yourusername/earnings-transcript-pipeline.git
 cd earnings-transcript-pipeline
+
+2. Install dependencies:
+
+```bashpip install -r requirements.txt
+
+3. Set up environment variables
+```cp .env.example .env
+
+4. Run Snowflake setup:
+```# Execute SQL files in order
+snowsql -f sql/01_schema.sql
+snowsql -f sql/02_tables.sql
+snowsql -f sql/03_procedures.sql
+snowsql -f sql/04_functions.sql
+
+5. Run the app:
+```streamlit run streamlit_app.py
