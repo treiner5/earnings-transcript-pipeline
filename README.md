@@ -40,16 +40,16 @@ cp .env.example .env
 mkdir -p .streamlit
 cat > .streamlit/secrets.toml << EOF
 [snowflake]
-user = "your_username"
-password = "your_password"
-account = "your_account"
-warehouse = "your_warehouse"
+user = "STREAMLIT_USER"
+password = "altimeter1"
+account = "ZRA72904.us-east-1"
+warehouse = "COMPUTE_WH"
 database = "EARNINGS_CALLS"
 schema = "RAW_DATA"
-role = "your_role"
+role = "PUBLIC"
 
 [fmp]
-api_key = "your_fmp_api_key"
+api_key = "m3gH2ixA9cammXIRIZLk4KkogBIcDnRb"
 EOF
 ```
 
